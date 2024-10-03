@@ -1,7 +1,7 @@
-# Amazon Polly lexicon
+# MBTA Pronunciation Lexicon
 
-The .pls file in this repo is a lexicon for Amazon Polly.
-It provides annotations for bits of text we want Polly to pronounce in non-standard ways.
+The .pls file in this repo is a pronunciation lexicon.
+It provides annotations for bits of text we want text-to-speech to pronounce in non-standard ways.
 
 The two most common annotations are **phonemes** and **aliases**.
 
@@ -22,7 +22,7 @@ Careful: `ˈ` "Primary stress" character looks very similar to a single quote, `
 
 ### Aliases
 
-These allow you to replace one word or phrase with another. Useful for telling Polly how/when to expand acronyms.
+These allow you to replace one word or phrase with another. Useful for telling text-to-speech how/when to expand acronyms.
 
 ```xml
 <lexeme>
