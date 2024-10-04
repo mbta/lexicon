@@ -63,7 +63,7 @@
     <phoneme>faɪn aɹts</phoneme>
   </lexeme>
   <lexeme>
-    <!-- Prevents text-to-speech from intepreting and reading "Veterans' Affairs" as "Virginia" :facepalm: -->
+    <!-- Prevents reading "Veterans' Affairs" as "Virginia" :facepalm: -->
     <grapheme>VA</grapheme>
     <alias>V.A.</alias>
   </lexeme>
