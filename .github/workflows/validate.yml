@@ -20,8 +20,6 @@ jobs:
       - name: Validate lexicon
         run: |
           aws polly put-lexicon --name mbtalexiconvalidate --content file://${{ github.workspace }}/mbtalexicon.pls
-          if [ $(echo $?) = 0 ]; then
-            aws polly delte-lexicon --name mbtalexiconvalidate
-          else
+          if [ $? -ne 0 ]; then
             exit 1
           fi

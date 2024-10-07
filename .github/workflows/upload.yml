@@ -3,6 +3,8 @@ name: Deploy to ECS
 on:
   push:
     branches: ["main"]
+    paths:
+      - "**.pls"
 
 jobs:
   upload:
