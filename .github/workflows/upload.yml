@@ -1,0 +1,23 @@
+name: Upload Lexicon
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "**.pls"
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: us-east-1
+      - name: Upload lexicon
+        run: |
+          aws polly put-lexicon --name mbtalexicon --content file://${{ github.workspace }}/mbtalexicon.pls
