@@ -60,7 +60,7 @@
   </lexeme>
   <lexeme>
     <grapheme>Fine Arts</grapheme>
-    <phoneme>faɪn aɹts</phoneme>
+    <phoneme>faɪn aɹts</phoneme
   </lexeme>
   <lexeme>
     <!-- Prevents reading "Veterans' Affairs" as "Virginia" :facepalm: -->
