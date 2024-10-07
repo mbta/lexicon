@@ -1,0 +1,37 @@
+name: Validate Lexicon
+
+on:
+  pull_request:
+    paths:
+      - "**.pls"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: us-east-1
+      - name: Validate lexicon
+        run: |
+          aws polly put-lexicon --name mbtalexiconvalidate --content file://${{ github.workspace }}/mbtalexicon.pls
+  cleanup:
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: us-east-1
+      - name: Validate lexicon
+        run: |
+          aws polly delete-lexicon --name mbtalexiconvalidate
