@@ -5,6 +5,7 @@ on:
     branches: ["main"]
     paths:
       - "**.pls"
+      - ".github/**"
 
 jobs:
   upload:
