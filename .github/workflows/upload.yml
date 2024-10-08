@@ -5,6 +5,7 @@ on:
     branches: ["main"]
     paths:
       - "**.pls"
+      - ".github/**"
 
 jobs:
   upload:
@@ -18,6 +19,8 @@ jobs:
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           aws-region: us-east-1
+      - name: Checkout repository
+        uses: actions/checkout@v4
       - name: Upload lexicon
         run: |
           aws polly put-lexicon --name mbtalexicon --content file://${{ github.workspace }}/mbtalexicon.pls
