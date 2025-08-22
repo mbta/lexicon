@@ -8,90 +8,83 @@
 
   <!--=== Phonemes ===-->
 
+  <!-- Guessing this sounds like "amorous" is reasonable but wrong -->
   <lexeme>
     <grapheme>Amory</grapheme>
     <phoneme>ˈeɪməɹi</phoneme>
   </lexeme>
+
+  <!-- Pronounce the "o" like in "on" rather than like a schwa -->
   <lexeme>
     <grapheme>Avon</grapheme>
-    <phoneme>eɪvan</phoneme>
+    <phoneme>ˈeɪvan</phoneme>
   </lexeme>
-  <lexeme>
-    <!-- Corrects "Central Lavenue" pronunciation -->
-    <grapheme>Central Avenue</grapheme>
-    <phoneme>ˈsɛntɹl ˈævənu</phoneme>
-  </lexeme>
+
+  <!-- Fix default pronunciation treating the "w" as silent -->
   <lexeme>
     <grapheme>Chiswick</grapheme>
-    <phoneme>tʃɪz wɪk</phoneme>
+    <phoneme>ˈtʃɪzwɪk</phoneme>
   </lexeme>
-  <lexeme>
-    <!-- Previous pronunciation sounded like "Fen-a-way" :thinkies: -->
-    <grapheme>Fenway</grapheme>
-    <phoneme>ˈfɛnweɪ</phoneme>
-  </lexeme>
+
+  <!-- Shorten gap between "Fine" and "Arts" -->
   <lexeme>
     <grapheme>Fine Arts</grapheme>
     <phoneme>faɪn aɹts</phoneme>
   </lexeme>
-  <lexeme>
-    <grapheme>Hyannis</grapheme>
-    <phoneme>haɪ ˈænɪs</phoneme>
-  </lexeme>
-  <lexeme>
-    <grapheme>LaGrange</grapheme>
-    <phoneme>ˌləˈgɹanʒ</phoneme>
-  </lexeme>
+
+  <!-- Pronounce "Lech" like "leach" instead of "leck" -->
   <lexeme>
     <grapheme>Lechmere</grapheme>
-    <phoneme>litʃ miɹ</phoneme>
+    <phoneme>ˈliːtʃmɪər</phoneme>
   </lexeme>
+
+  <!-- Pronounce "ard" with a schwa instead of like "arm" -->
   <lexeme>
-    <grapheme>Mattapan</grapheme>
-    <phoneme>mæɾ əˈpæn</phoneme>
-  </lexeme>
-  <lexeme>
-    <!-- Moves emphasis to "Pack-" from "-ard" -->
     <grapheme>Packard</grapheme>
     <phoneme>ˈpækəɹd</phoneme>
   </lexeme>
+
+  <!-- Pronounce "body" with a schwa instead of like the word "body" -->
   <lexeme>
     <grapheme>Peabody</grapheme>
-    <phoneme>ˈpibədi</phoneme>
+    <phoneme>ˈpiːbədi</phoneme>
   </lexeme>
+
+  <!-- Pronounce as one word with initial emphasis -->
   <lexeme>
-    <!-- Corrects over-long "aw" and under-emphasized "mut" -->
-    <grapheme>Shawmut</grapheme>
-    <phoneme>ʃɔmʌt</phoneme>
-  </lexeme>
-  <lexeme>
-    <!-- Moves emphasis to "Stony" from "Brook" -->
     <grapheme>Stony Brook</grapheme>
-    <phoneme>ˌstonibrʊk</phoneme>
-  </lexeme>
-  <lexeme>
-    <grapheme>Wren St</grapheme>
-    <grapheme>Wren Street</grapheme>
-    <phoneme>ˈɹɛnˌstrit</phoneme>
+    <phoneme>ˈstonibrʊk</phoneme>
   </lexeme>
 
   <!--=== Aliases ===-->
 
+  <!-- With confusing capitalization removed, this is correctly pronounced like
+       the French astronomer's name -->
   <lexeme>
-    <!-- Slows down pronunciation and puts emphasis in the right place -->
+    <grapheme>LaGrange</grapheme>
+    <alias>Lagrange</alias>
+  </lexeme>
+
+  <!-- Slow down pronunciation and put emphasis in the right place -->
+  <lexeme>
     <grapheme>Longwood</grapheme>
     <alias>Long Wood</alias>
   </lexeme>
+
+  <!-- Prevent ".com" from being read as an end-of-sentence and then "com" -->
   <lexeme>
     <grapheme>mbta.com</grapheme>
     <alias>MBTA dot com</alias>
   </lexeme>
+
+  <!-- Ensure MBTA is always read as an acronym and not a "word" -->
   <lexeme>
     <grapheme>mbta</grapheme>
     <alias>MBTA</alias>
   </lexeme>
+
+  <!-- Prevent reading the acronym for "Veterans' Affairs" as "Virginia" -->
   <lexeme>
-    <!-- Prevents reading "Veterans' Affairs" as "Virginia" :facepalm: -->
     <grapheme>VA</grapheme>
     <alias>V.A.</alias>
   </lexeme>
