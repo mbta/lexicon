@@ -9,26 +9,16 @@ MBTA-specific terms and place names correctly.
 
 ## Status
 
-#### Recommended Use
-
-The lexicon format is a standard any text-to-speech engine can use. However,
-this lexicon is only _intended_ for use with AWS Polly's [neural engine], and
-includes some "cheats" where we specify a slightly _incorrect_ IPA to get Polly
-to pronounce something more naturally. Use with other TTS engines is currently
-neither supported nor recommended.
-
-[neural engine]: https://docs.aws.amazon.com/polly/latest/dg/neural-voices.html
-
-#### Comprehensiveness
-
-This lexicon is _not_ comprehensive/exhaustive: it contains only "fixes" for
-specific issues we've noticed with AWS Polly, rather than being a database of
-correct pronunciations for every possible MBTA term. It will evolve over time
-as we notice more issues.
+This lexicon is _not_ comprehensive: it is primarily a set of "fixes" for
+specific issues we've noticed with AWS Polly's [neural engine], rather than a
+database of correct pronunciations for every possible MBTA term. It will evolve
+over time as we notice more issues.
 
 This repo includes automation that keeps the copy of the lexicon in our AWS
 account synced with the committed copy, so our own apps that use Polly will
 always have the most up-to-date corrections.
+
+[neural engine]: https://docs.aws.amazon.com/polly/latest/dg/neural-voices.html
 
 
 ## Development
