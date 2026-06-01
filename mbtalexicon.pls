@@ -65,12 +65,6 @@
     <alias>Lagrange</alias>
   </lexeme>
 
-  <!-- Slow down pronunciation and put emphasis in the right place -->
-  <lexeme>
-    <grapheme>Longwood</grapheme>
-    <alias>Long Wood</alias>
-  </lexeme>
-
   <!-- Prevent ".com" from being read as an end-of-sentence and then "com" -->
   <lexeme>
     <grapheme>mbta.com</grapheme>
